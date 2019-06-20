@@ -41,7 +41,7 @@ nav a:hover {
   
 main {
     margin-top: 20px;
-    margin-left: 160px; /* Same as the width of the sidenav */
+    margin-left: 160px; 
 }
 
 footer{
@@ -58,7 +58,7 @@ footer{
 
 /**/
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 1080px) {
 
     nav{
         position: fixed;
@@ -85,7 +85,7 @@ footer{
 
     main{
         margin-top: 75px;
-        margin-left: unset; /* Same as the width of the sidenav */
+        margin-left: unset;
     }
 
     footer{
@@ -94,27 +94,35 @@ footer{
         bottom: 0;
         margin-left: unset;
     }
+
+    footer p{
+        font-size: 15px
+    }
 }
 
 main{
-    font-size: 28px; /* Increased text to enable scrolling */
+    font-size: 28px;
     padding: 0px 10px;
 }
 
 h1{
     font-size: 30px;
+    margin-bottom: 20px;
 }
 
 h2{
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 h3{
     font-size: 12px;
+    margin-bottom: 20px;
 }
 
 p{
     font-size: 12px;
+    margin-bottom: 20px;
 }
 
 footer p{
