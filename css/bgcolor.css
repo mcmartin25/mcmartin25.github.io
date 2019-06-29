@@ -1,0 +1,55 @@
+/* Text Color */
+
+.bgcolor-grey{
+    background-color: grey;
+}
+
+.bgcolor-gray{
+    /* Usually used in the United States and other regions */
+    background-color: grey;
+}
+
+.bgcolor-red{
+    background-color: red;
+}
+
+.bgcolor-green{
+    background-color: green;
+}
+
+.bgcolor-yellow{
+    background-color: yellow;
+    color: black; /* for text visibility */
+}
+
+.bgcolor-yellow a,.bgcolor-yellow .alertClose{
+    color: black; /* for link text visibility */
+}
+
+.bgcolor-blue{
+    background-color: blue;
+}
+
+.bgcolor-purple{
+    background-color: purple;
+}
+
+.bgcolor-cyan{
+    background-color: cyan;
+    color: black; /* for text visibility */
+}
+
+.bgcolor-cyan a,.bgcolor-cyan .alertClose{
+    color: black; /* for link text visibility */
+}
+
+.bgcolor-white{
+    background-color: white;
+    color: black; /* for text visibility */
+}
+
+.bgcolor-white a,.bgcolor-white .alertClose{
+    color: black; /* for link text visibility */
+}
+
+/* Text Color */
