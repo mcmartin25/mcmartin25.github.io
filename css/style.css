@@ -74,35 +74,6 @@ a.current{
     float: left;
 }
 
-@keyframes blink {
-    50% {
-      opacity: 0.0;
-    }
-}
-
-@-webkit-keyframes blink {
-    50% {
-      opacity: 0.0;
-    }
-}
-
-.blink {
-    animation: blink 1s step-start 0s infinite;
-    -webkit-animation: blink 1s step-start 0s infinite;
-}
-
-@media only screen and (max-device-width: 640px){
-    div.consoletext{
-        display: none;
-    }
-    body{
-        width: 90vw;
-        height: 100vh;
-    }
-}
-
-/* Under Construction Zone */
-
 /* Buttons */
 
 input,select,textarea,button {
@@ -311,5 +282,45 @@ table{
   }
 
 /* Progress Bar Ended */
+
+/* Image */
+
+img, image{
+    width: 25%
+}
+
+/* Image Ended */
+
+@keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
+}
+
+.blink {
+    animation: blink 1s step-start 0s infinite;
+    -webkit-animation: blink 1s step-start 0s infinite;
+}
+
+@media only screen and (max-device-width: 640px){
+    div.consoletext{
+        display: none;
+    }
+    body{
+        width: 90vw;
+        height: 100vh;
+    }
+    img, image{
+        width: 100%
+    }
+}
+
+/* Under Construction Zone */
 
 /* Under Construction Zone Ended */
