@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Noto+Sans+TC:400,700&display=swap');
+
+body {
+    font-family: 'Inconsolata', monospace, 'Noto Sans TC', sans-serif!important;
+    background-color: black!important;
+    color: white!important;
+    /* overflow-x: hidden; */
+    /* font-size: 18px; */
+    /* margin: 8px 16px 16px 16px; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+pre{
+    color: white!important;
+}
+
+#navbar{
+    padding-bottom: 1rem;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    border-color: transparent;
+    /* border: 0; */
+    border-radius: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: none;
+}
+
+/* .btn:focus{
+    outline: none;
+}
+
+.btn:focus-visible{
+    outline: 3px solid white;
+} */
+
+.btn-nav:hover{
+    background-color: white;
+    color: black;
+    border-color: transparent;
+}
+
+.btn-nav:active{
+    background-color: white;
+    color: black;
+    border-color: transparent;
+}
+
+ul {
+    color: white;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+li {
+    /* padding-left: 1em; */
+    text-indent: -1em;
+}
+
+li:before {
+    content: "*";
+    padding-right: 5px;
+}
+
+h6{
+    font-weight: bold;
+}
+
+#command{
+    display: flex;
+}
+
+#command input#input{
+    border: none; 
+    width: 100%;
+    background-color: transparent;
+    color: white;
+}
+
+#command input:focus {
+    outline:none;
+    /* caret-color: transparent; */
+}
+
+table.help{
+    width: 100%;
+}
+
+table.help tr{
+    vertical-align: top;
+}
+
+table.help.help-command{
+    width: 25%;
+}
+
+table.help.help-content{
+    width: 75%;
+}
