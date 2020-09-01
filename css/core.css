@@ -48,7 +48,7 @@ pre{
     border-color: transparent;
 }
 
-.btn-nav:active{
+.btn-nav:active, .btn-nav.active{
     background-color: white;
     color: black;
     border-color: transparent;
