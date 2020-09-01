@@ -9,7 +9,34 @@ body {
     /* margin: 8px 16px 16px 16px; */
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 1rem;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* ::-webkit-scrollbar-track { */
+    /* background: #f1f1f1;  */
+/* } */
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* https://stackoverflow.com/a/52361343 */
+
+/* ::-webkit-scrollbar-button:single-button {
+    background-color: #888;
+    display: block;
+    /* border-style: solid; */
+    /* height: 20px;
+    width: 15px;
+} */
 
 pre{
     color: white!important;
