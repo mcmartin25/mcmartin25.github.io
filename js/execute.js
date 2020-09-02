@@ -11,16 +11,19 @@ function execute(command){
         case "github":
             $(location).attr("href", "https://github.com/mcmartin25.html");
             break;
-        case "home":
-            $(location).attr("href", "index.html");
-            break;
         case "help":
         case "?":
             help();
             break;
+        case "home":
+            $(location).attr("href", "index.html");
+            break;
         case "ver":
-            typeset(systemInfo.description);
-            typeset(systemInfo.header+" "+systemInfo.version);
+            typeset(systemInfo.header);
+            // typeset(systemInfo.summary);
+            typeset(systemInfo.description+" "+systemInfo.version);
+            typeset("<i>This is a minified (and slightly modified) version of MConsole Web and this website is based on it.</i>");
+            typeset("<i>If you're interested in MConsole Web, please visit " + urlify("https://github.com/mcmartin25/MConsoleWeb") + "</i>");
             break;
         default:
             typeset("Command error");
@@ -45,4 +48,12 @@ function typeset(content, newline = true){
     }else{
         $('#content').append(content);
     }
+}
+
+// https://stackoverflow.com/a/1500501
+function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+      return '<a href="' + url + '">' + url + '</a>';
+    })
 }

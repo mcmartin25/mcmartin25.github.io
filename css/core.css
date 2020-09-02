@@ -42,6 +42,10 @@ pre{
     color: white!important;
 }
 
+pre#logo{
+    overflow: hidden;
+}
+
 #navbar{
     padding-bottom: 1rem;
 }
@@ -139,4 +143,21 @@ table.help.help-command{
 
 table.help.help-content{
     width: 75%;
+}
+
+#myself{
+    padding-left: 1rem;
+    float: right;
+}
+
+#myself *{
+    width: 256px;
+}
+
+@media only screen and (max-width: 768px) {
+    #myself{
+        padding-left: 0;
+        float: left;
+        width: 100%;
+    }
 }

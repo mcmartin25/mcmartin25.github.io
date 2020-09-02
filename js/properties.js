@@ -12,7 +12,8 @@ let systemInfo = {
 
 let commands = {
     'about': 'Show Info.', 
+    'github': 'Go to my Github profile.', 
     'help, ?': 'Show commands.', 
-    'home': '', 
+    'home': 'Go to home page.', 
     'ver': 'Show MConsole version.'
 };
