@@ -3,10 +3,15 @@ function execute(command){
     let index = command.split(/\s(.+)/)[1];
     switch(data.toLowerCase()){
         case "about":
-            $(location).attr("href", "about.html");
+            // https://stackoverflow.com/a/17143667
+            if ($(location).prop('href').split('/').pop() != "about.html") {
+                $(location).attr("href", "about.html");
+            }
             break;
         case "break":
-            $(location).attr("href", "404.html");
+            if ($(location).prop('href').split('/').pop() != "404.html") {
+                $(location).attr("href", "404.html");
+            }
             break;
         case "font":
             changefont(index);
@@ -19,7 +24,9 @@ function execute(command){
             help();
             break;
         case "home":
-            $(location).attr("href", "index.html");
+            if ($(location).prop('href').split('/').pop() != "index.html") {
+                $(location).attr("href", "index.html");
+            }
             break;
         case "ver":
             typeset(systemInfo.header);
@@ -34,39 +41,6 @@ function execute(command){
     }
     console.log(index);
     console.log(typeof(index))
-}
-
-function help(){
-    typeset('<table class="help">',false);    
-    $.each(commands, function(command, content){
-        $('.help').last().append(`<tr>
-        <td class="help-command">`+command+`</td>
-        <td class="help-content">`+content+`</td>
-        </tr>`);
-    });
-    typeset('</table>',false);
-}
-
-function typeset(content, newline = true){
-    if (newline){
-        $('#content').append(content+br);
-    }else{
-        $('#content').append(content);
-    }
-}
-
-// https://stackoverflow.com/a/1500501
-function urlify(urltext, displaytext) {
-    var result;
-    var urlRegex = /(https?:\/\/[^\s]+)/g;
-    return urltext.replace(urlRegex, function(url) {
-        if (displaytext) {
-            result = '<a href="' + url + '">' + displaytext + '</a>'
-        } else {
-            result = '<a href="' + url + '">' + url + '</a>'
-        }
-        return result;
-    })
 }
 
 function changefont(mode, desc=true){
@@ -118,9 +92,43 @@ function changefont(mode, desc=true){
     }
 }
 
+function help(){
+    typeset('<table class="help">',false);    
+    $.each(commands, function(command, content){
+        $('.help').last().append(`<tr>
+        <td class="help-command">`+command+`</td>
+        <td class="help-content">`+content+`</td>
+        </tr>`);
+    });
+    typeset('</table>',false);
+}
+
 // https://stackoverflow.com/a/28608620
 function removeBodyClasses(){
     $("body[class*='font-set']").removeClass (function (index, css) {
         return (css.match (/(^|\s)font-set\S+/g) || []).join(' ');
     });
+}
+
+
+function typeset(content, newline = true){
+    if (newline){
+        $('#content').append(content+br);
+    }else{
+        $('#content').append(content);
+    }
+}
+
+// https://stackoverflow.com/a/1500501
+function urlify(urltext, displaytext) {
+    var result;
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return urltext.replace(urlRegex, function(url) {
+        if (displaytext) {
+            result = '<a href="' + url + '">' + displaytext + '</a>'
+        } else {
+            result = '<a href="' + url + '">' + url + '</a>'
+        }
+        return result;
+    })
 }
