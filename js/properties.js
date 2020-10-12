@@ -12,8 +12,15 @@ let systemInfo = {
 
 let commands = {
     'about': 'Show Info.', 
+    'font': 'Set different font.', 
     'github': 'Go to my Github profile.', 
     'help, ?': 'Show commands.', 
     'home': 'Go to home page.', 
     'ver': 'Show MConsole version.'
 };
+
+let fonts = [
+    {en:"Inconsolata", zh_tw:"Noto Sans TC", license: urlify("https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL", "Open Font License")},
+    {en:"Noto Serif", zh_tw:"Noto Serif TC", license: urlify("https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL", "Open Font License")},
+    {en:"Ubuntu Mono", zh_tw:"*****", license: urlify("http://font.ubuntu.com/ufl/", "Ubuntu Font License")}
+];

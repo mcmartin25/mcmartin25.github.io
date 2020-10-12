@@ -1,7 +1,15 @@
+/* Import Fonts */
+/* Default */
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Noto+Sans+TC:400,700&display=swap');
 
+/* Set 1 - Open source replacement of Times New Roman and MingLiu */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
+
+/* Set 2 - Ubuntu Terminal default font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
 body {
-    font-family: 'Inconsolata', monospace, 'Noto Sans TC', sans-serif!important;
+    font-family: 'Inconsolata', monospace, 'Noto Sans TC', sans-serif;
     background-color: black!important;
     color: white!important;
     /* overflow-x: hidden; */
@@ -11,6 +19,18 @@ body {
     padding-right: 1rem;
     padding-bottom: 1rem;
 }
+
+/* Font Classses */
+
+.font-set1{
+    font-family: 'Noto Serif', serif, 'Noto Serif TC', serif;
+}
+
+.font-set2{
+    font-family: 'Ubuntu Mono', monospace, 'Noto Serif TC', serif;
+}
+
+/* Scrollbar */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -38,6 +58,8 @@ body {
     width: 15px;
 } */
 
+/* Logo */
+
 pre{
     color: white!important;
 }
@@ -46,9 +68,13 @@ pre#logo{
     overflow: hidden;
 }
 
+/* Navbar */
+
 #navbar{
     padding-bottom: 1rem;
 }
+
+/* Buttons */
 
 .btn{
     background-color: black;
@@ -91,6 +117,8 @@ pre#logo{
     border-color: transparent;
 }
 
+/* List (Unordered) */
+
 ul {
     color: white;
     list-style: none;
@@ -109,9 +137,13 @@ li:before {
     padding-right: 5px;
 }
 
+/* Subtitle (h6 only) */
+
 h6{
     font-weight: bold;
 }
+
+/* Command input */
 
 #command{
     display: flex;
@@ -129,11 +161,13 @@ h6{
     /* caret-color: transparent; */
 }
 
-table.help{
+/* Table (e.g. help table) */
+
+table.help, table.fontlist{
     width: 100%;
 }
 
-table.help tr{
+table.help tr, table.fontlist tr{
     vertical-align: top;
 }
 
@@ -144,6 +178,24 @@ table.help.help-command{
 table.help.help-content{
     width: 75%;
 }
+
+table.fontlist .fontlist-index{
+    width: 10%;
+}
+
+table.fontlist .fontlist-lang, table.fontlist .fontlist-lang-en, table.fontlist .fontlist-lang-zhtw{
+    width: 30%;
+}
+
+table.fontlist .fontlist-lang-license{
+    width: 1;
+}
+
+table.fontlist .fontlist-content{
+    width: 45%;
+}
+
+/* Portrait of myself */
 
 #myself{
     padding-left: 1rem;
