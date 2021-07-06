@@ -1,0 +1,32 @@
+---
+layout: default
+title: List of blog posts
+---
+<h2>Categories</h2>
+<div style="margin-bottom: 1rem;">
+{% for category in site.categories %}
+{% capture category_name %}{{ category | first }}{% endcapture %}
+<a href="cat.html#{{ category_name }}">{{ category_name }}</a>
+{% endfor %}
+</div>
+<br>
+
+<h2>Latest Posts</h2>
+<br>
+{% assign ps = site.posts | size %}
+{% if ps == 0 %} 
+<p class="text-muted" style="display: inline-block;">No posts</p><br>
+{% endif %} 
+{% for post in site.posts %}
+<div class="row">
+    <div class="col">
+        <h3 style="display: inline-block;"><a href="{{ post.url }}">{{ post.title }}</a></h3> <p class="text-muted" style="display: inline-block;">by {{ post.author }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <p>{{ post.excerpt | strip_html | normalize_whitespace }} <a href="{{ post.url }}">[Read more...]</a></p>
+    </div>
+</div>
+<br>
+{% endfor %}

@@ -12,6 +12,7 @@ let systemInfo = {
 
 let commands = {
     'about': 'Show Info.', 
+    'clear, cls': 'Clear screen.',
     'font': 'Set different font.', 
     'github': 'Go to my Github profile.', 
     'help, ?': 'Show commands.', 

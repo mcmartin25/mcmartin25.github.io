@@ -1,0 +1,11 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Skip all test files
+_posts/2021-06-29-lipsum.md
+_posts/2021-06-29-lipsum2.md
+_posts/2021-06-29-lipsum3.md
+_posts/2021-06-29-lipsum4.md
+_posts/2021-06-29-lipsum5.md

@@ -1,0 +1,6 @@
+collections:
+  authors:
+    output: true
+    domain: mcmartin25.github.io
+    url: https://mcmartin25.github.io
+    baseurl: /mcmartin25.github.io/

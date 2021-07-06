@@ -117,6 +117,41 @@ pre#logo{
     border-color: transparent;
 }
 
+
+
+/* Links */
+
+a{
+    background-color: black;
+    color: white;
+    border-color: transparent;
+    /* border: 0; */
+    border-radius: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: none;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: white;
+    color: black;
+    border-color: transparent;
+    text-decoration: none;
+
+}
+
+a.active{
+    background-color: white;
+    color: black;
+    border-color: transparent;
+}
+
+
 /* List (Unordered) */
 
 ul {
@@ -137,10 +172,39 @@ li:before {
     padding-right: 5px;
 }
 
-/* Subtitle (h6 only) */
+/* List (Blog list No-bullet) */
 
-h6{
+li.no-bullet:before {
+    content: none;
+    /* padding-right: 5px; */
+}
+
+/* Subtitle (h1 - h6) */
+
+h1, h2, h3, h4, h5, h6{
+    font-size: 1rem;
     font-weight: bold;
+}
+
+/* Text (p) */
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#sitecontent > #postarticle p {
+    margin-bottom: 1rem;
+}
+
+#sitecontent > p {
+    margin-bottom: 1rem;
+}
+
+/* Image in sitecontent class */
+
+#sitecontent img{
+    width: 256px;
 }
 
 /* Command input */
@@ -193,23 +257,4 @@ table.fontlist .fontlist-lang-license{
 
 table.fontlist .fontlist-content{
     width: 45%;
-}
-
-/* Portrait of myself */
-
-#myself{
-    padding-left: 1rem;
-    float: right;
-}
-
-#myself *{
-    width: 256px;
-}
-
-@media only screen and (max-width: 768px) {
-    #myself{
-        padding-left: 0;
-        float: left;
-        width: 100%;
-    }
 }

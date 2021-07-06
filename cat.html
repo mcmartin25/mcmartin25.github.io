@@ -1,0 +1,37 @@
+---
+layout: default
+title: List of categories of blog posts
+---
+<a href="{{ site.baseurl }}/blog.html">&lt; Back to list</a>
+<div style="margin-bottom: 1rem;">
+<h2>Categories</h2>
+{% if site.categories %}
+<div style="margin-bottom: 1rem;">
+</div>
+
+<div style="margin-bottom: 1rem;">
+{% for category in site.categories %}
+{% capture category_name %}{{ category | first }}{% endcapture %}
+<a href="#{{ category_name }}">{{ category_name }}</a>
+{% endfor %}
+</div>
+
+{% for category in site.categories %}
+{% capture category_name %}{{ category | first }}{% endcapture %}
+<h4 id="{{ category_name }}">{{ category_name }}</h4>
+{% for post in site.categories[category_name] %}
+<article class="archive-item">
+    <p><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></p>
+</article>
+{% endfor %}
+{% endfor %}
+
+{% else %}
+<p>Nothing in here. Take this cat first...</p>
+<pre style="margin-bottom: 0;">   ^_^</pre>
+<pre style="margin-bottom: 0;">  ( ._.)  *meow*</pre>
+<pre style="margin-bottom: 0;">  / &gt; &gt;</pre>
+{% endif %}
+
+</div>
+<br>

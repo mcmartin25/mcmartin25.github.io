@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<a href="{{ site.baseurl }}/blog.html">&lt; Back to list</a>
+<h1 style="margin-top: 1rem;">{{ page.title }}</h1>
+<p style="margin-bottom: 0;">{{ page.date | date_to_string }}</p>
+<p class="text-muted">{{ page.author }}</p>
+
+<div id="postarticle">
+    {{ content }}
+</div>
+
+<div class="row">
+    {% if page.previous.url %}
+    <div class="col-12 col-md-6">
+        <a href="{{ page.previous.url }}">&lt; {{ page.previous.title }}</a>
+    </div>
+    {% else %}
+    <div class="col-12 col-md-6">
+        <p style="color: black;" aria-hidden="true">&lt; Live and learn.</a>
+    </div>
+    {% endif %}
+    {% if page.next.url %}
+    <div class="col-12 col-md-6" style="text-align: right;">
+        <a href="{{ page.next.url }}">{{ page.next.title }} &gt;</a>
+    </div>
+    {% else %}
+    <div class="col-12 col-md-6">
+        <p style="color: black; float: right;" aria-hidden="true">Fight for freedom! &gt;</a>
+    </div>
+    {% endif %}
+</div>

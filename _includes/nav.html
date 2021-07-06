@@ -1,0 +1,9 @@
+<div id="navbar">
+    <button type="button" class="btn btn-nav btn-sm sr-only sr-only-focusable" id="skiptomaininput">Skip to main input</button>
+    {% for item in site.data.nav %}
+    <a href="{{ item.link }}" 
+    class="btn btn-nav btn-sm {% if page.url == item.link %} active {% endif %}">
+      {{ item.name }}
+    </a>
+    {% endfor %}
+</div>
