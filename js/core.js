@@ -5,6 +5,18 @@ let br = "<br>";
 
 var last = "";
 
+$(document).ready(function(){
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("fontset")===null) {
+            localStorage.setItem("fontset", "0");
+        }
+        changefont(localStorage.getItem("fontset"),false);
+        console.log(localStorage.getItem("fontset"));
+    } else {
+        console.log("Your browser does not support Web Storage.");
+    }
+});
+
 $(document).keydown(function(e){
     
     if ($("#input").is(":focus")) {
